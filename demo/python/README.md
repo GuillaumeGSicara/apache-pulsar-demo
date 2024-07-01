@@ -1,12 +1,13 @@
-## How To
+# How To
 
 Create a python virtual environement with the `requirement.txt` to run the following scripts
 
+# A Quick Overview
 ## Producer
 
-It will create a persistent (see [persistent vs. non-persistent](https://pulsar.apache.org/docs/3.3.x/admin-api-topics/)) message on the `default` namespace for the `public` \
+It will create a persistent (see [persistent vs. non-persistent](https://pulsar.apache.org/docs/3.3.x/admin-api-topics/)) message on the `default` namespace for the `public` tenant
 
-The message will be random words extracted from a nltk corpus.
+The message will be random words extracted from a `nltk` corpus.
 
 ## Reader
 
