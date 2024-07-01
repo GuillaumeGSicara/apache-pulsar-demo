@@ -1,28 +1,28 @@
 import pulsar
 import logging
-from pulsar import Reader
 
 
 # Create a pulsar client object
+logger = logging.getLogger('pulsar')
+logger.setLevel(logging.ERROR)
 client = pulsar.Client(
     'pulsar://localhost:6650',
-    logger= logging.getLogger('pulsar')
+    logger=logger
 )
 
 # Create a reader on a topic
-reader: Reader = client.create_reader("demo-topic", pulsar.MessageId.earliest)
+reader: pulsar.Reader = client.create_reader(
+    topic="persistent://public/default/rand-word-topic",
+    start_message_id=pulsar.MessageId.earliest,
+    reader_name="wordomatic-reader"
+)
 print("Reading messages from topic {}...".format(reader.topic()))
 
 print("Reading all messages...")
 while reader.has_message_available():
     print(reader.read_next().data())
 
-# The seek method is used to move the reader to a specific message id
-print("Reading last message...")
-print(reader.seek(pulsar.MessageId.latest))
-assert reader.has_message_available() == False
-
-print("Reading first message")
+print("Moving reading cursor to first message")
 reader.seek(pulsar.MessageId.earliest)
 print(reader.read_next().data())
 

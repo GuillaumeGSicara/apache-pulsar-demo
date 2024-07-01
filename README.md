@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="/img/pulsar-demo.png" alt="pulsar logo">
+</p>
+
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 
 ## Description
@@ -38,3 +42,4 @@ On sucess you can click on your environement to access the pulsar manager panel
 ## To Do
 
 - Pin Pulsar to a specific version an not latest
+- Link a [postgres DB with a sink](https://pulsar.apache.org/docs/next/io-jdbc-sink/) for demo !
