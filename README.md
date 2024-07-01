@@ -34,3 +34,7 @@ Once logged in, you will need to create an environement. An environment is linke
 </p>
 
 On sucess you can click on your environement to access the pulsar manager panel
+
+## To Do
+
+- Pin Pulsar to a specific version an not latest
