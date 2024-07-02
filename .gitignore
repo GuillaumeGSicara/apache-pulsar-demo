@@ -1,2 +1,12 @@
 # Ignore volumes
 data/*
+demo/postgres/data
+
+
+# Ignore pulsar .nar
+pulsar-io-jdbc-postgres-3.3.0.nar
+
+
+# Ignore pulsar shell unpacked
+apache-pulsar-shell-3.3.0-bin.tar.gz
+apache-pulsar-shell-3.3.0/*

@@ -39,6 +39,42 @@ Once logged in, you will need to create an environement. An environment is linke
 
 On sucess you can click on your environement to access the pulsar manager panel
 
+
+# Start the pulsar shell
+
+to start the pulsar shell you'll first need to get the shell `.tar.gz` distribution here
+```bash
+curl -L https://www.apache.org/dyn/closer.lua/pulsar/pulsar-3.3.0/apache-pulsar-shell-3.3.0-bin.tar.gz\?action\=download -o apache-pulsar-shell-3.3.0-bin.tar.gz
+```
+
+unzip it with
+```bash
+tar xvfz apache-pulsar-shell-3.3.0-bin.tar.gz 
+```
+
+`cd` to the created directory and run the pulsar shell (you'll need a recent java version on your machine > 18)
+
+```bash
+cd apache-pulsar-shell-3.3.0
+bin/pulsar-shell
+```
+
+the output should look something like this:
+<p align="center">
+  <img src="/img/pulsar-shell-live.png" alt="Your Image Description">
+</p>
+
+Check that your are correctly connected to the pulsar cluster declared above
+```bash
+admin tenants list
+````
+**Note**: __The created folder apache-pulsar-shell-3.3.0/conf contains the cluster information your pulsar shell will connect to, by default, you should have to change anything in this file__
+
+<p align="center">
+  <img src="/img/pulsar-shell-tenants-list.png" alt="Your Image Description">
+</p>
+
+
 ## To Do
 
 - Pin Pulsar to a specific version an not latest

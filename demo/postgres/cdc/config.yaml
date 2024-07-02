@@ -1,0 +1,10 @@
+tenant: "public"
+namespace: "default"
+name: "jdbc-postgres-sink"
+inputs: [ "persistent://public/default/rand-word-topic" ]
+sinkType: "jdbc-postgres"
+configs:
+    userName: "postgres"
+    password: "postgres"
+    jdbcUrl: "jdbc:postgresql://localhost:5432/pulsar_postgres_jdbc_sink"
+    tableName: "random_words"
