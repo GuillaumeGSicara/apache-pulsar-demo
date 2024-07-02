@@ -68,10 +68,10 @@ Check that your are correctly connected to the pulsar cluster declared above
 ```bash
 admin tenants list
 ````
-**Note**: __The created folder apache-pulsar-shell-3.3.0/conf contains the cluster information your pulsar shell will connect to, by default, you should have to change anything in this file__
+**Note**: _The created folder apache-pulsar-shell-3.3.0/conf contains the cluster information your pulsar shell will connect to, by default, you should not have to change anything in this file_
 
 <p align="center">
-  <img src="/img/pulsar-shell-tenants-list.png" alt="Your Image Description">
+  <img src="/img/pulsar-shell-tenant-list.png" alt="Your Image Description">
 </p>
 
 
